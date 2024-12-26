@@ -1,0 +1,17 @@
+import random
+
+# Definición de la función para generar contraseñas
+def gen_pass(pass_length):
+    elements = "+-/*!&$#?=@<>"
+    password = ""
+
+    for i in range(pass_length):
+        password += random.choice(elements)
+
+    return password
+
+# Ejemplo de uso de la función
+if __name__ == "__main__":
+    # Generar una contraseña de 10 caracteres
+    password = gen_pass(10)
+    print(f"Contraseña generada: {password}")
